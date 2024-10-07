@@ -1,8 +1,6 @@
 import sys
 input = sys.stdin.readline
 
-A, B = map(int, input().split())
+a, b = map(int, input().split())
 
-min = A - B
-
-print(min)
+print(a-b)
