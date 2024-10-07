@@ -1,8 +1,6 @@
 import sys
 input = sys.stdin.readline
 
-A, B = map(int, input().split())
-
-sum = A + B
-
+a, b = map(int, input().split())
+sum = a + b
 print(sum)
