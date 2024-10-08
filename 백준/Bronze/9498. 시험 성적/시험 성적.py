@@ -1,9 +1,7 @@
 import sys
 input = sys.stdin.readline
 
-score = int(input())
-
-0 <= score <= 100
+score = int(input().strip())
 
 if 90 <= score <= 100:
     print("A")
@@ -15,3 +13,4 @@ elif 60 <= score <= 69:
     print("D")
 else:
     print("F")
+
