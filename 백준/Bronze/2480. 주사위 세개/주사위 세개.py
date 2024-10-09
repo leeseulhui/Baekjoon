@@ -1,25 +1,26 @@
 import sys
 input = sys.stdin.readline
 
-x, y, z = map(int, input().split())
+A, B, C = map(int, input().split())
 
-prize = 0
+ans = 0 #0으로 초기화
 
-if x == y == z: 
-    prize = 10000 + x * 1000
-elif x == y or y == z or x == z: 
-    if x == y:
-        prize = 1000 + x * 100
-    elif y == z:
-        prize = 1000 + y * 100
-    elif x == z:
-        prize = 1000 + x * 100
-else: 
-    prize = max(x, y, z) * 100  
+#눈이 모두 같을 때
+if A == B == C:
+    ans = 10000 + A * 1000
 
-print(prize)
+#눈이 두 개만 같을 때
+elif A == B or B == C or A == C:
+    if A == B or A == C:
+        ans = 1000 + A * 100
+    else:
+        ans = 1000 + B * 100
 
+#눈이 모두 다를 때        
+else:
+    ans = max(A, B, C) * 100
 
+print(ans)
 
 
 
