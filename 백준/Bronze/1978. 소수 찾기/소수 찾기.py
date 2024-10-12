@@ -1,23 +1,23 @@
 import sys
 input = sys.stdin.readline
 
-#입력부분
-# 소수 : 1과 자신만으로만 나누어져야 함.
-N = int(input())
-numbers = list(map(int, input().split()))
+N = int(input().strip())
+p = 0
 
-#소수의 개수를 저장할 곳
-prime = 0
+# N개의 수 입력받을 리스트
+num = list(map(int, input().split()))
 
-for num in numbers:
-    if num < 2:    #1은 소수가 아니기 때문에 건너뛰고 2부터 시작
+for n in num:
+    if n < 2:
         continue
-    is_prime = True
-    for i in range(2, int(num**0.5)+1):
-        if num % i == 0:
-            is_prime = False
-            break
-    if is_prime:
-        prime = prime + 1
 
-print(prime)
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            break
+    else:
+        p += 1
+
+print(p) 
+
+
+    
