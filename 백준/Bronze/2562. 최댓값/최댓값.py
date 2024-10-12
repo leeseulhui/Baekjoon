@@ -1,13 +1,16 @@
 import sys
 input = sys.stdin.readline
 
-N = [int(input().strip())for _ in range(9)]
+store = []
 
-#최댓값 구해
-max_value = max(N)
+for _ in range(9):
+    a = int(input().strip())
+    store.append(a)
 
-#최댓값 위치 구해
-max_index = N.index(max_value) + 1    #1부터 시작하는 인덱스이므로 +1이 필요
+max_value = max(store)      # 최댓값
+
+max_index = store.index(max_value)  # 해당 최댓값의 인덱스
 
 print(max_value)
-print(max_index)
+print(max_index + 1)
+
