@@ -1,16 +1,14 @@
 import sys
 input = sys.stdin.readline
 
-#시험 본 과목의 개수
-N = int(input().strip())
+n = int(input().strip())
+current_score = list(map(int, input().split()))
 
-#업데이트 전 과목 시험 점수(현재 성적)
-score = list(map(int, input().split()))
+m = max(current_score)  # 자기 점수 중 최댓값
 
-M = max(score)
+re_score = [(score / m) * 100 for score in current_score]
 
-update_score = [(s / M) * 100 for s in score]
-new_avg = sum(update_score) / N
+avg = sum(re_score) / n
 
-print(new_avg)
+print(avg)
 
