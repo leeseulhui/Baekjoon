@@ -1,8 +1,8 @@
 import sys
 input = sys.stdin.readline
 
-N = int(input())
+n = int(input())
 
-A = list(map(int, input().split()))
+a = list(map(int, input().split()))
 
-print(min(A),max(A))
+print(min(a), max(a))
