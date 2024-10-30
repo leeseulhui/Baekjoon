@@ -1,16 +1,18 @@
 import sys
 input = sys.stdin.readline
 
-sorted_box = []
+num_box = []
 
 for _ in range(5):
     n = int(input().strip())
-    sorted_box.append(n)
+    num_box.append(n)
 
-avg = sum(sorted_box) // len(sorted_box)
+avg = sum(num_box) // 5
 
-sorted_box.sort()   # 리스트를 먼저 정렬
-median = sorted_box[len(sorted_box) // 2]
+num_box.sort()  # 중앙값 추출 전 먼저 오름차순으로 정렬해야 함
+middle = num_box[2]
 
 print(avg)
-print(median)
+print(middle)
+
+
