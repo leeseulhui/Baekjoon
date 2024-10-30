@@ -1,16 +1,15 @@
 import sys
 input = sys.stdin.readline
 
-p_box = []
-
 n = int(input().strip())
+num_box = []
 
 for _ in range(n):
-    p = int(input().strip())
+    num = int(input().strip())
+    num_box.append(num)
 
-    p_box.append(p)
+    num_box.sort()
 
-    sorted_p = sorted(p_box)
-
-for num in sorted_p:
+for num in num_box:
     print(num)
+
